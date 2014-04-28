@@ -1,0 +1,23 @@
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 20pt;
+  line-height: 2;
+  text-align: center;
+  color: #F5F5F5;
+  Background: #708090;
+}
+
+h1 {
+  font weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #DC143C;
+  font-size: 32pt;
+}
+
+h2 {
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  color: #DC143C;
+  font-size: 18pt;
+}
