@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css"
     href="mycode.css">
-    <script type="text/javascript" src="function.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head> 
+<body>
 <h1> Edward Mercado  </h1> 
     <img height=200 length=200 src="http://i.imgur.com/u9boQ9F.jpg?2" /img>
-<head>
 <h1> About me: </h1> 
 <p> I was born in San Pablo, CA. Soccer is life. Sports is life. I will be attending CSUS 2018(Go Hornets!). I want to travel the world some day, maybe tomorrow who knows. Living life to the fullest. </p>
 <h1> Favorite Hobbies: </h1>
@@ -26,33 +28,11 @@
   <li> <a href=/lyrics.html >Im The Man </a>
   <hr>
 <iframe width="560" height="315" src="//www.youtube.com/embed/UYOV7NPuyp4" frameborder="0" allowfullscreen></iframe>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Button</title>
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    </head>
-    <body>
                 <p id="coo">Guess what </p>
-                <input type="button" onclick="changeText()" value="click me" />
+                <input class="myButton" type="button" onclick="changeText()" value="click me" />
                 <p id="no"> Whatever you do, do not click the button </p>
-                <input type="button" onclick="change()" value="click me" >
-
-               <script type="text/javascript">
-                        function changeText() {
-                                // alert("hi");
-                                $("#coo").html("eddy was here");
-                                $("#coo").fadeOut();
-                        }
-
-                        function change() {
-                                // do something when fade out finished
-                                $("#no").html()
-                                $("#no").mouseleave();
-                                alert("You just got trolled");
-                        }
-                       
-
-                </script>
+                <input type="button" onclick="change()" value="click me" /> 
+</body> 
+</html>
 
