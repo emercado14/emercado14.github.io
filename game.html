@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>  Guessing game </title>
+<script type="text/javascript">
+var x;
+function playGame ( ) {
+  prompt("Guess a number between 1 and 10!");
+  if(answer > x) { alert("Guess lower!"); }
+  if(answer < x) { alert("Guess higher!!"); }
+  if(answer == x) { alert("Correct!"); return true; }
+  return false;
+}
+var x = math.random () *10;
+</script>
+</head>
+<body>
+<strong> Guess a random number </strong>
+<input type="button" value="Insert Coin" onclick="playGame()">
+
+</body>
+</html>
