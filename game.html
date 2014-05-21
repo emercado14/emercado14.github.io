@@ -1,21 +1,26 @@
 <html>
 <head>
-<title>  Guessing game </title>
-<script type="text/javascript">
-var x;
-function playGame ( ) {
-  prompt("Guess a number between 1 and 10!");
-  if(answer > x) { alert("Guess lower!"); }
-  if(answer < x) { alert("Guess higher!!"); }
-  if(answer == x) { alert("Correct!"); return true; }
-  return false;
-}
-var x = math.random () *10;
-</script>
-</head>
-<body>
-<strong> Guess a random number </strong>
-<input type="button" value="Insert Coin" onclick="playGame()">
+<title> JS guessing game </title>
+<script>
+var a = Math.floor(Math.random() * 10) + 1;
+var turns = 10;
+var hint = 'I am thinking of a number from 1-10!';
 
+  while (turns > 0) {
+  var guess = prompt(hint +' You have ' + turns + ' guesses left.');
+  if (!guess) break;
+  guess = Number(guess);
+  if (guess == a) {
+
+  turns = 0;
+  } else {
+    hint = 'Nope.';
+    if (guess < a) hint += ' Guess lower!';
+    if (guess > a) hint += ' Guess bigger!';
+    turns = turns - 1;
+  }
+}
+alert('The number I was thing of was ' + a + '.');
+</script>
 </body>
 </html>
