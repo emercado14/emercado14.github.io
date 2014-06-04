@@ -15,11 +15,11 @@
       {   
 
     for(var i = 0; i < 100; i++) {
-        var x = random(1, 400);
-        var y = random(1, 400);
-        var distance = dist(random, random, 200, 200);
+        var x = random(0, 400);
+        var y = random(0, 400);
+        var distance = dist(x, y, 200, 200);
         
-        if (y > 200) {
+        if (distance < 200) {
             stroke(92, 222, 40, 50);
         } else {
             stroke(255, 0, 0, 50);
@@ -39,4 +39,3 @@
     <canvas id="targetcanvas" width="400" height="400"></canvas>
   </body>
 </html>
-
