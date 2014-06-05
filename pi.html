@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="targetcanvas">
+      
+      var f;
+      var total = 1;
+      var inside = 0;
+      
+      void setup() {
+        size(400, 400);
+        strokeWeight(5);
+        f = createFont("comic sans ms");
+        textFont(f);
+        strokeWeight(5);
+       }
+      
+      void draw() {
+        var p = 0;
+        for(var i = 0; i < 50; i++) {
+            var x = random(0, 400);
+            var y = random(0, 400);
+            var distance = dist(x, y, 200, 200);
+
+            if (distance < 200) {    
+                stroke(92, 222, 40, 50);
+                inside+=1;
+            } else {
+                stroke(255, 0, 0, 50);
+            }
+            total+=1;
+
+            point(x, y);
+        }
+      
+        stroke(0, 0, 0);
+        fill(235, 240, 79);
+        textFont(f , 30);
+        textSize(19);
+        rect(3, 357, 153, 40);
+        fill(0, 0, 0);
+        var number = inside/total * 4;
+        text(nf(number, 1, 5), 26, 388);
+      };
+
+</script>    
+  </head>
+
+  <body>
+    <canvas id="targetcanvas" width="400" height="400"></canvas>
+  </body>
+</html>
+
